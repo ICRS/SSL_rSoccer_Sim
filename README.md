@@ -29,11 +29,12 @@ isbn="978-3-030-98682-7"
 ```
 
 ## Requirements
+It is listed in [setup.py](setup.py)
 - Python 3.7+
 - gymnasium >= 0.28.1
 - [RSim](https://github.com/robocin/rSim) == v1.2.0
 ## Install through The Python Package Index (PyPI)
-
+We won't be using this (its outdated): 
 ```bash
 pip install rsoccer-gym
 ```
@@ -62,6 +63,7 @@ Dribbling          |  Pass Endurance     |
 |:--------------------------------------------------------------------------:|:-----------------:|:------------:|:----------:|
 |[VSS-v0](rsoccer_gym/vss/README.md#vss-v0)                                       |      Box(40,)     |    Box(2,)   |    1200    |
 |[SSLStaticDefenders-v0](rsoccer_gym/ssl/README.md#sslstaticdefenders-v0)         |      Box(24,)     |    Box(5,)   |    1000    |
+|[SSLStandard-v0](rsoccer_gym/ssl/README.md#sslstandard-v0)             |      Box(4 + 8*n_robots_blue + 8*n_robots_yellow,)     |    Box(5,)   |    1000    |
 |[SSLDribbling-v0](rsoccer_gym/ssl/README.md#ssldribbling-v0)                     |      Box(21,)     |    Box(4,)   |    4800    |
 |[SSLContestedPossession-v0](rsoccer_gym/ssl/README.md#sslcontestedpossession-v0) |      Box(14,)     |    Box(5,)   |    1200    |
 |[SSLPassEndurance-v0](rsoccer_gym/ssl/README.md#sslpassendurance-v0)             |      Box(18,)     |    Box(3,)   |    1200    |
