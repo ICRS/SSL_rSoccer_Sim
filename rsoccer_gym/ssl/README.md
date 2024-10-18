@@ -113,10 +113,10 @@ In this environment, you can select the number of yellow and blue robots on the 
     - Energy
     - Goal
 - ## Done:
-    When a goal happens
-    When the ball is outside of the field
-    When the robot is in goal keeper area
-    When the robot is outside of the field
+    - When a goal happens
+    - When the ball is outside of the field
+    - When the robot is in goal keeper area
+    - When the robot is outside of the field
 
 -----
 
