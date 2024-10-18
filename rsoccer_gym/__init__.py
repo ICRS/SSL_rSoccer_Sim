@@ -28,3 +28,10 @@ register(
     entry_point="rsoccer_gym.ssl.ssl_hw_challenge:SSLPassEnduranceEnv",
     max_episode_steps=1200,
 )
+
+register(
+    id="SSLStandard-v0",
+    entry_point="rsoccer_gym.ssl.ssl_hw_challenge.standard_ssl:SSLStandardEnv",
+    kwargs={"field_type": 2, "n_robots_blue": 6, "n_robots_yellow": 6, "time_step": 0.025},
+    max_episode_steps=1000,
+)
