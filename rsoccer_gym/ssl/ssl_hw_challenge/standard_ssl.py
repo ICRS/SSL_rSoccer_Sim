@@ -15,7 +15,7 @@ class SSLStandardEnv(SSLBaseEnv):
 
     Description:
         The controlled robot is started on the field center and needs to
-        score on the positive side field, 
+        score on the positive side field.
     Observation:
         Type: Box(4 + 8*n_robots_blue + 8*n_robots_yellow)
         Normalized Bounds to [-1.2, 1.2]
@@ -35,8 +35,8 @@ class SSLStandardEnv(SSLBaseEnv):
     Reward:
         +5 if goal (blue)
     Starting State:
-        Robot on field center, ball and defenders randomly positioned on
-        positive field side
+        Robots on thier respective sides, ball and defenders randomly positioned on
+        positive field side.
     Episode Termination:
         Goal, 25 seconds (1000 steps), or rule infraction
     """
