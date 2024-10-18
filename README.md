@@ -29,10 +29,11 @@ isbn="978-3-030-98682-7"
 ```
 
 ## Requirements
-It is listed in [setup.py](setup.py)
 - Python 3.7+
 - gymnasium >= 0.28.1
-- [RSim](https://github.com/robocin/rSim) == v1.2.0
+- [RSim](https://github.com/robocin/rSim) == v1.2.0 <br  />
+
+Requirements listed in [setup.py](setup.py)
 ## Install through The Python Package Index (PyPI)
 We won't be using this (its outdated): 
 ```bash
