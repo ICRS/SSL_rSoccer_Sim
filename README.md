@@ -41,8 +41,8 @@ pip install rsoccer-gym
 ```
 ## Install through Source
 ```bash
-git clone https://github.com/robocin/rSoccer.git
-cd rSoccer
+git clone https://github.com/ICRS/SSL_rSoccer_Sim.git
+cd SSL_rSoccer_Sim
 pip install .
 ```
 For [editable installs](https://setuptools.pypa.io/en/latest/userguide/development_mode.html), change last command to `"pip install -e ."`.
