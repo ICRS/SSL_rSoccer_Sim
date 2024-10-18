@@ -14,9 +14,11 @@ The base environment define normalization methods using field size and robot par
 
 # Available Envs
 - [**SSLStaticDefenders-v0**](#sslstaticdefenders-v0)
+- [**SSLStandard-v0**](#sslstandard-v0)
 - [**SSLDribbling-v0**](#ssldribbling-v0)
 - [**SSLContestedPossession-v0**](#sslcontestedpossession-v0)
 - [**SSLPassEndurance-v0**](#sslpassendurance-v0)
+
 
 # SSLStaticDefenders-v0
 In this environment the yellow team has six stopped robots and the blue team has one controlled robot. The episode ends when a goal occurs.
@@ -62,6 +64,59 @@ In this environment the yellow team has six stopped robots and the blue team has
     - Goal
 - ## Done:
     When a goal happens
+
+-----
+
+# SSLStandard-v0
+In this environment, you can select the number of yellow and blue robots on the field. The episode ends when a goal occurs.
+
+- ## Observations:
+    - Box(24,)
+    - Value Range: [-1.25, 1.25] (Normalized)
+
+    | Index        	| Observation                	|
+    |--------------	|----------------------------	|
+    | 0            	| Ball X                     	|
+    | 1            	| Ball Y                     	|
+    | 2            	| Ball Vx                    	|
+    | 3            	| Ball Vy                    	|
+    | +i*8	        | id i Blue Robot X         	|
+    |      	        | id i Blue Robot Y          	|
+    |   	        | id i Blue Robot sin(theta) 	|
+    |   	        | id i Blue Robot cos(theta) 	|
+    |   	        | id i Blue Robot Vx         	|
+    |   	        | id i Blue Robot Vy         	|
+    |      	        | id i Blue Robot v_theta    	|
+    |      	        | id i Blue Robot infrared (mapped to (+ve) on or (-ve) off) |
+    | +i*8	        | id i Yellow Robot X         	|
+    |      	        | id i Yellow Robot Y          	|
+    |   	        | id i Yellow Robot sin(theta) 	|
+    |   	        | id i Yellow Robot cos(theta) 	|
+    |   	        | id i Yellow Robot Vx         	|
+    |   	        | id i Yellow Robot Vy         	|
+    |      	        | id i Yellow Robot v_theta    	|
+    |      	        | id i Yellow Robot infrared (mapped to (+ve) on or (-ve) off) |
+
+- ## Actions:
+    - Box(5,)
+    - Value Range: [-1, 1]
+
+    | Index | Action        |
+    |-------|---------------|
+    | 0     | Axis X speed |
+    | 1     | Axis Y speed |
+    | 2     | Axis theta speed |
+    | 3     | Kicker power |
+    | 4     | Active Dribbler |
+
+- ## Rewards:
+    - Energy
+    - Goal
+- ## Done:
+    When a goal happens
+    When the ball is outside of the field
+    When the robot is in goal keeper area
+    When the robot is outside of the field
 
 -----
 
